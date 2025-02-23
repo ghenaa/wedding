@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دعوة عقد قران</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Great+Vibes&display=swap');
+
+        body {
+            font-family: 'Amiri', serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f9f5f3;
+            overflow: hidden;
+        }
+
+        .background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px; /* Same size as container */
+            height: 500px; /* Same size as container */
+            background: url('images/template 1/md.jpeg') no-repeat center center;
+			background-size: cover;
+            transform: translate(-50%, -50%) rotate(0deg);
+            z-index: 1;
+			animation: rotateOut 8s ease-in-out forwards; /* Full 360 degree rotation */
+			 opacity: 0.7; /* Make background slightly transparent */
+			box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Shadow effect */
+			border-radius: 15px; /* Optional: Make the image have rounded corners */
+
+        }
+
+        .container {
+            width: 400px;
+            height: 500px;
+            background: rgba(250, 231, 225, 0.9);
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            border: 5px solid #D3B8AE;
+            position: relative;
+            opacity: 0;
+            animation: fadeInCard 0.5s ease-in-out 3s forwards;
+            z-index: 2;
+			
+
+        }
+
+        .decorative {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2em;
+            color: #8C665A;
+            animation: fadeIn 1s ease-in-out;
+        }
+		.mdname {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8em;
+    color: #8C665A;
+    opacity: 0; /* Initially hidden */
+    animation: zoomIn 1.5s ease-in-out 3.5s forwards; /* Starts after card fade-in */
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5); /* Start from smaller size */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Zoom to normal size */
+    }
+}
+
+
+        .subtitle {
+            font-size: 1.3em;
+            letter-spacing: 1px;
+            color: #8C665A;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .aya {
+            font-size: 1.5em;
+            color: #6D4C41;
+            margin-bottom: 15px;
+            animation: fadeIn 1.2s ease-in-out;
+            line-height: 1.8;
+        }
+
+        .date-box {
+            background: #D3B8AE;
+            padding: 10px;
+            border-radius: 15px;
+            margin: 20px auto;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border: 2px solid white;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+/* Rotation animation for the background */
+@keyframes rotateOut {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg); /* Full rotation */
+        opacity: 0.7; /* Reduce opacity for transparency */
+    }
+}
+
+        @keyframes fadeInCard {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <p class="aya"> ﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا <br>
+         لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ﴾</p>
+		 <p class="decorative">الحمد لله الذي بنعمته تتم الصالحات</p>
+        <p class="subtitle">عقد قران</p>
+        <h1 class="mdname">محمد & ديما</h1>
+        
+        <div class="date-box">
+            <div>2025 ,02 ,25</div>
+        </div>
+    </div>
+</body>
+</html>
